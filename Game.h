@@ -7,11 +7,12 @@
 
 
 #include "Miner.h"
-
+#include <string>
 class Game {
 public:
 
     static void uebungsmodus(Miner *&player);
+    static void movePlayer(Miner *&player, char);
 };
 
 

@@ -22,9 +22,12 @@ void testStation(){
     cout << testMiner->getSeiteKoordinate() << endl;
 
     field -> initializeField();
-    field -> printField(testMiner);
+    //field -> printField(testMiner);
 
-
+    Game ::movePlayer(testMiner, 'd');
+    cout << testMiner->getReiheKoordinate() << endl;
+    cout << testMiner->getZeileKoordinate() << endl;
+    cout << testMiner->getSeiteKoordinate() << endl;
 
 
 }

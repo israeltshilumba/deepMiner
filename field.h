@@ -6,21 +6,23 @@
 #define DEEPMINER_FIELD_H
 
 #include <array>
+#include "Miner.h"
 
-#define LAENGE 10
-#define BREITE 10
-#define HOEHE 10
+#define SEITE 10
+#define ZEILE 10
+#define REIHE 10
 
 using namespace std;
 class Field {
 public:
     virtual void initializeField();
-    virtual void printField();
+    void printField(Miner *&testMiner);
 
 protected:
-    array<array<array<int, HOEHE>, BREITE>, LAENGE> gameField; //Dreidimensionales Array
+    array<array<array<int, SEITE>, ZEILE>, REIHE> gameField; //Dreidimensionales Array
 
 private:
+
 
 };
 
