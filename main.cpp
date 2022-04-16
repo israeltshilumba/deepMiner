@@ -9,7 +9,9 @@
 
 using namespace std;
 int main() {
-int input;
+
+    int input;
+
     GameMenues::gameStartMessage();
     GameMenues::printLine();
     GameMenues::printCharacters();
@@ -19,6 +21,9 @@ int input;
         cin.ignore();
         cin >> input;
     }
+
+
+
     //toDo: initialize Robot
 
     //toDo: initialize enemy/opp
@@ -30,10 +35,5 @@ int input;
 
 
 
-    /*
-    Miner *walle = new Miner;
-    walle -> initializeField();
-    walle -> printField();
-     */
     return 0;
 }
