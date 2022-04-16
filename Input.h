@@ -10,6 +10,8 @@ class Input {
 public:
     static void invalidInputMessage();
     static bool validateCharacter(int input);
+    static bool validateGameMode(int input);
+    static int repeatInput(int input);
 protected:
 private:
 };

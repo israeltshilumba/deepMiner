@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <iostream>
 #include "Input.h"
 
 bool Input::validateCharacter(int input) {
@@ -19,4 +20,17 @@ bool Input::validateCharacter(int input) {
 
 void Input::invalidInputMessage() {
     std::cout << "\nIhre Eingabe ist ungueltig. Bitte probieren Sie es noch einmal.\n";
+}
+
+bool Input::validateGameMode(int input) {
+    return false;
+}
+
+int Input::repeatInput(int input) {
+    while (Input::validateCharacter(input)){
+        std::cin.clear();
+        std::cin.ignore();
+        std::cin >> input;
+    }
+    return input;
 }

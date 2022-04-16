@@ -7,22 +7,55 @@
 #include "Input.h"
 #include "Raphael.h"
 #include "Michelangelo.h"
+#include "Game.h"
 
+void selectGameModes();
 
 using namespace std;
-int main() {
 
+void testStation(){
+    Miner *testMiner = new Miner;
+    Field *field = new Field;
+    Game :: uebungsmodus(testMiner);
+    cout << testMiner->getReiheKoordinate() << endl;
+    cout << testMiner->getZeileKoordinate() << endl;
+    cout << testMiner->getSeiteKoordinate() << endl;
+
+    field -> initializeField();
+    field -> printField(testMiner);
+
+
+
+
+}
+void selectGameModes(){
+
+    GameMenues :: printLine();
+    cout << "Bitte Waehlen Sie einen Spielmodus aus";
+    cout << "\nUebungsmodus [1]\n";
+    cout << "\nSpieler vs Computer [2]\n";
+    cout << "\nSpieler vs Spieler [3]\n";
+    //cout << "\nComputer vs Computer [4]\n";
+    GameMenues :: printLine();
+
+    int input;
+    cin >> input;
+    input = Input ::repeatInput(input);
+
+
+
+
+}
+int main() {
+    testStation();
+    /*
     int input;
 
     GameMenues::gameStartMessage();
     GameMenues::printLine();
     GameMenues::printCharacters();
     cin >> input;
-    while (Input::validateCharacter(input)){
-        cin.clear();
-        cin.ignore();
-        cin >> input;
-    }
+    input = Input ::repeatInput(input);
 
 
 
@@ -48,7 +81,7 @@ int main() {
     //
 
 
-
+*/
 
     return 0;
 }

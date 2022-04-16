@@ -6,9 +6,26 @@
 #include "Miner.h"
 
 
-Miner::Miner() {
-    cout << "\nGeben Sie Ihren Namen ein.\n";
-    std::cin >> this->name;
-    cout << "\nWillkommen " << this->name;
-    cout << "\nMiner CONSTRUCTOR";
+int Miner::getReiheKoordinate() const {
+    return x_coordinate;
+}
+
+void Miner::setReiheKoordinate(int xCoordinate) {
+    x_coordinate = xCoordinate;
+}
+
+int Miner::getZeileKoordinate() const {
+    return y_coordinate;
+}
+
+void Miner::setZeileKoordinate(int yCoordinate) {
+    y_coordinate = yCoordinate;
+}
+
+int Miner::getSeiteKoordinate() const {
+    return z_coordinate;
+}
+
+void Miner::setSeiteKoordinate(int zCoordinate) {
+    z_coordinate = zCoordinate;
 }

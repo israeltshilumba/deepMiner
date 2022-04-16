@@ -5,14 +5,28 @@
 #ifndef DEEPMINER_MINER_H
 #define DEEPMINER_MINER_H
 
-#include "field.h"
 
-class Miner : public Field {
+class Miner{
 public:
-    Miner();
+
+
+public:
+    int getReiheKoordinate() const; //Breite
+
+    void setReiheKoordinate(int);
+
+    int getZeileKoordinate() const; //Hoehe
+
+    void setZeileKoordinate(int);
+
+    int getSeiteKoordinate() const; //Tiefe
+
+    void setSeiteKoordinate(int);
 
 protected:
-    string name;
+    int x_coordinate;
+    int y_coordinate;
+    int z_coordinate;
 };
 
 
