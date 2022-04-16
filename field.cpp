@@ -23,11 +23,6 @@ void Field::initializeField() { //weist zufällige Werte zw. 1-9 ins Feld zu
 }
 
 void Field::printField() {
-/*
-    for (auto iterator = this->gameField.begin()->begin()->begin(); iterator != this->gameField.end()->end()->end(); iterator++, cout << " "){
-        cout << *iterator;
-    }
-    */
 
     for (auto hoehe : this->gameField){
         for (auto breite : hoehe){

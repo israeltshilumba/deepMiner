@@ -1,9 +1,39 @@
 #include <iostream>
+#include <limits>
+#include <vector>
 #include "field.h"
+#include "Miner.h"
+#include "GameMenues.h"
+#include "Input.h"
 
+
+using namespace std;
 int main() {
-    Field *test = new Field;
-    test -> initializeField();
-    test -> printField();
+int input;
+    GameMenues::gameStartMessage();
+    GameMenues::printLine();
+    GameMenues::printCharacters();
+    cin >> input;
+    while (Input::validateCharacter(input)){
+        cin.clear();
+        cin.ignore();
+        cin >> input;
+    }
+    //toDo: initialize Robot
+
+    //toDo: initialize enemy/opp
+
+    //toDo: Movement
+
+    //
+
+
+
+
+    /*
+    Miner *walle = new Miner;
+    walle -> initializeField();
+    walle -> printField();
+     */
     return 0;
 }
