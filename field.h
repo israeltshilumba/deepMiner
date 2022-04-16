@@ -5,16 +5,20 @@
 #ifndef DEEPMINER_FIELD_H
 #define DEEPMINER_FIELD_H
 
-#define FELD_ZEILEN 10
-#define FELD_REIHEN 10
-#define FELD_ARRAY 10
+#include <array>
 
+#define LAENGE 10
+#define BREITE 10
+#define HOEHE 10
 
+using namespace std;
 class Field {
 public:
-    void initializeField();
+    virtual void initializeField();
+    virtual void printField();
+
 protected:
-    int field[FELD_REIHEN][FELD_ZEILEN][FELD_ARRAY];
+    array<array<array<int, HOEHE>, BREITE>, LAENGE> gameField; //Dreidimensionales Array
 
 private:
 
