@@ -5,6 +5,8 @@
 #include "Miner.h"
 #include "GameMenues.h"
 #include "Input.h"
+#include "Raphael.h"
+#include "Michelangelo.h"
 
 
 using namespace std;
@@ -25,7 +27,20 @@ int main() {
 
 
     //toDo: initialize Robot
+    Miner *miner_1;
+    //Miner *test = new Miner;
+    //Miner *MAP = new Miner;
 
+    switch (input) {
+        case 1 : //miner_1 = new Michelangelo;
+            break;
+        case 2 : miner_1 = new Raphael;
+            break;
+        case 3 :
+            break;
+        default:
+            break;
+    }
     //toDo: initialize enemy/opp
 
     //toDo: Movement

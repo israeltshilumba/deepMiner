@@ -6,7 +6,7 @@
 #define DEEPMINER_WALLE_H
 #include "Miner.h"
 
-class WallE : public Miner {
+class Michelangelo : public Miner {
 
 };
 

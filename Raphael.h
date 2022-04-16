@@ -6,8 +6,9 @@
 #define DEEPMINER_OPTIMUSPRIME_H
 #include "Miner.h"
 
-class OptimusPrime : public Miner {
-
+class Raphael : public Miner {
+public:
+    Raphael();
 };
 
 

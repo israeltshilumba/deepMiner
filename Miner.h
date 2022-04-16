@@ -9,7 +9,7 @@
 
 class Miner : public Field {
 public:
-    Miner(string name);
+    Miner();
 
 protected:
     string name;
