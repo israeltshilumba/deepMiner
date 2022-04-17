@@ -2,28 +2,47 @@
 // Created by isilu on 16.04.2022.
 //
 
+#include <iostream>
 #include "Game.h"
 #include "Miner.h"
 
 void Game::uebungsmodus(Miner *&player) { //Ich bin actually genial
     player->setSeiteKoordinate(9); //Seite
-    player->setZeileKoordinate(0); //Zeile
-    player->setReiheKoordinate(0); //Reihe
+    player->setZeileKoordinate(9); //Zeile
+    player->setReiheKoordinate(1); //Reihe
 }
 
+
 void Game::movePlayer(Miner *&player, char input) {
+
     int reihe = player -> getReiheKoordinate();
     int zeile = player -> getZeileKoordinate();
     int seite = player -> getSeiteKoordinate();
 
     switch(input){
-        case 'w' : player ->setZeileKoordinate(zeile + 1) ;
+        case 's' : {
+            if (reihe + 1 > 9){
+                std::cout << "\nWumps, da scheint eine Wand zu sein.\n";
+            } else player -> setReiheKoordinate(reihe + 1) ;
+        }
             break;
-        case 'a' : player ->setReiheKoordinate(reihe - 1) ;
+        case 'a' : {
+            if (zeile - 1 < 1){
+                std::cout << "\nWumps, da scheint eine Wand zu sein.\n";
+            } else player->setZeileKoordinate(zeile - 1);
+        }
             break;
-        case 's' : player ->setZeileKoordinate(zeile - 1) ;
+        case 'w' : {
+            if (reihe - 1 < 1){
+                std::cout << "\nWumps, da scheint eine Wand zu sein.\n";
+            } else player->setReiheKoordinate(reihe - 1);
+        }
             break;
-        case 'd' : player ->setReiheKoordinate(reihe + 1) ;
+        case 'd' : {
+            if (zeile + 1 > 9){
+                std::cout << "\nWumps, da scheint eine Wand zu sein.\n";
+            } else player->setZeileKoordinate(zeile + 1);
+        }
             break;
     }
 }

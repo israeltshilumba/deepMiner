@@ -24,10 +24,21 @@ void testStation(){
     field -> initializeField();
     //field -> printField(testMiner);
 
-    Game ::movePlayer(testMiner, 'd');
+    //Game ::movePlayer(testMiner, 'w');
     cout << testMiner->getReiheKoordinate() << endl;
     cout << testMiner->getZeileKoordinate() << endl;
     cout << testMiner->getSeiteKoordinate() << endl;
+    char input;
+    while(1){
+        field -> printField(testMiner);
+        cout << "\nInput";
+        cin >> input;
+        Game ::movePlayer(testMiner, input);
+        cout << testMiner->getReiheKoordinate() << endl;
+        cout << testMiner->getZeileKoordinate() << endl;
+        cout << testMiner->getSeiteKoordinate() << endl;
+        field -> printField(testMiner);
+    }
 
 
 }

@@ -13,6 +13,8 @@ public:
 
     static void uebungsmodus(Miner *&player);
     static void movePlayer(Miner *&player, char);
+
+    static bool validateMovement(Miner *&player, char input);
 };
 
 
