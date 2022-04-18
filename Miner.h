@@ -7,10 +7,12 @@
 
 
 class Miner{
-public:
-
 
 public:
+    Miner();
+
+    virtual void drillHole() = 0;
+
     int getReiheKoordinate() const; //Breite
 
     void setReiheKoordinate(int);
@@ -28,6 +30,8 @@ public:
     void addPoints(int add);
 
     void setPoints(int);
+
+
 protected:
     int x_coordinate;
     int y_coordinate;

@@ -8,3 +8,7 @@
 Raphael::Raphael() {
     std::cout << "\nRaffael ist bereit Ihnen zu helfen!";
 }
+
+void Raphael::drillHole() {
+    std::cout << std::endl<< "GGUT" << std::endl;
+}

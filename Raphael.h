@@ -9,6 +9,8 @@
 class Raphael : public Miner {
 public:
     Raphael();
+
+    void drillHole();
 };
 
 

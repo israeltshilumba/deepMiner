@@ -41,3 +41,11 @@ void Miner::setPoints(int points) {
 void Miner::addPoints(int add){
     this->points = points + add;
 }
+/*
+void Miner::drillHole() {
+    //std::cout << "\nsuccess\n";
+}
+*/
+Miner::Miner(){
+    points = 0;
+}

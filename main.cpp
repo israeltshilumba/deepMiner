@@ -14,8 +14,8 @@ void selectGameModes();
 using namespace std;
 
 void testStation(){
-    Miner *testMiner = new Miner;
-    Field *field = new Field;
+    Miner *testMiner = new Raphael;
+    auto *field = new Field;
     Game :: uebungsmodus(testMiner);
     cout << testMiner->getReiheKoordinate() << endl;
     cout << testMiner->getZeileKoordinate() << endl;
@@ -40,6 +40,7 @@ void testStation(){
         cout << testMiner->getSeiteKoordinate() << endl;
         field -> fieldPoints(testMiner);
         field -> printField(testMiner);
+        testMiner->drillHole();
         cout << endl << "Punkte: "<< testMiner -> getPoints() << endl;
     }
 
