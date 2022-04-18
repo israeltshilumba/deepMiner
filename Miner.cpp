@@ -29,3 +29,15 @@ int Miner::getSeiteKoordinate() const {
 void Miner::setSeiteKoordinate(int zCoordinate) {
     z_coordinate = zCoordinate;
 }
+
+int Miner::getPoints() const {
+    return points;
+}
+
+void Miner::setPoints(int points) {
+    this->points = points;
+}
+
+void Miner::addPoints(int add){
+    this->points = points + add;
+}

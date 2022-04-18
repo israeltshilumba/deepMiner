@@ -23,10 +23,21 @@ public:
 
     void setSeiteKoordinate(int);
 
+    int getPoints() const;
+
+    void addPoints(int add);
+
+    void setPoints(int);
 protected:
     int x_coordinate;
     int y_coordinate;
     int z_coordinate;
+
+
+
+    int points;
+
+
 };
 
 

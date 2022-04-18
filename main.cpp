@@ -30,14 +30,17 @@ void testStation(){
     cout << testMiner->getSeiteKoordinate() << endl;
     char input;
     while(1){
-        field -> printField(testMiner);
+        cout << endl << "Punkte: "<< testMiner -> getPoints() << endl;
+        //field -> printField(testMiner);
         cout << "\nInput";
         cin >> input;
         Game ::movePlayer(testMiner, input);
         cout << testMiner->getReiheKoordinate() << endl;
         cout << testMiner->getZeileKoordinate() << endl;
         cout << testMiner->getSeiteKoordinate() << endl;
+        field -> fieldPoints(testMiner);
         field -> printField(testMiner);
+        cout << endl << "Punkte: "<< testMiner -> getPoints() << endl;
     }
 
 

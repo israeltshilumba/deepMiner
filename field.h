@@ -18,6 +18,8 @@ public:
     virtual void initializeField();
     void printField(Miner *&testMiner);
 
+    void fieldPoints(Miner *&testMiner);
+
 protected:
     array<array<array<int, SEITE>, ZEILE>, REIHE> gameField; //Dreidimensionales Array
 
